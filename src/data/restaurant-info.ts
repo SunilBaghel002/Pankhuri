@@ -1,0 +1,36 @@
+export const restaurantInfo = {
+  name: 'Pankhuri Reloaded',
+  tagline: 'Pure Vegetarian',
+  description: 'A premium, authentic pure vegetarian dining experience in the historic city of Agra. We serve rich culinary traditions crafted with modern sophistication.',
+  address: {
+    street: 'Fatehabad Road, Opposite Kalakriti',
+    city: 'Agra',
+    state: 'Uttar Pradesh',
+    pincode: '282001',
+    country: 'India',
+  },
+  phone: '+91 93100 65542',
+  email: 'info@pankhurireloaded.com',
+  whatsapp: '+919310065542',
+  hours: {
+    monday: '11:00 AM - 11:00 PM',
+    tuesday: '11:00 AM - 11:00 PM',
+    wednesday: '11:00 AM - 11:00 PM',
+    thursday: '11:00 AM - 11:00 PM',
+    friday: '11:00 AM - 11:00 PM',
+    saturday: '11:00 AM - 11:00 PM',
+    sunday: '11:00 AM - 11:00 PM',
+  },
+  social: {
+    instagram: 'https://instagram.com/pankhurireloaded',
+    facebook: 'https://facebook.com/pankhurireloaded',
+    twitter: 'https://twitter.com/pankhurireloaded',
+    youtube: 'https://youtube.com/pankhurireloaded',
+    zomato: 'https://www.zomato.com/agra/pankhuri-reloaded',
+    swiggy: 'https://www.swiggy.com/agra/pankhuri-reloaded',
+  },
+  coordinates: {
+    lat: 27.1592,
+    lng: 78.0468,
+  },
+};

@@ -2,26 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply bg-[#FFF9F0] text-[#2C2C2C] font-body antialiased selection:bg-primary-200 selection:text-primary-900;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-[#1A3A0A];
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+::-webkit-scrollbar-track {
+  background: #FFF9F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7BA05B;
+  border-radius: 9999px;
+  border: 2px solid #FFF9F0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2D5016;
+}
+
+/* Utility classes for premium interactions */
+.frosted-glass {
+  background: rgba(255, 250, 240, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.text-stroke-saffron {
+  -webkit-text-stroke: 1px #D4920B;
+}
+
+.shimmer-effect {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
   }
 }
