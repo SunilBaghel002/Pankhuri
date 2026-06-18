@@ -6,7 +6,6 @@ export interface MenuItem {
   image?: string;
   isSpecial?: boolean;
   isNew?: boolean;
-  isVegan?: boolean;
   spiceLevel?: 'mild' | 'medium' | 'spicy';
 }
 

@@ -14,7 +14,7 @@ import VegIndicator from '../shared/VegIndicator';
 import Button from '../ui/Button';
 
 // Gather 4 specific chef special items
-const chefSpecialIds = ['dal-makhani', 'palak-paneer', 'masala-dosa', 'special-thali'];
+const chefSpecialIds = ['paneer-tikka', 'paneer-pasanda', 'malai-kofta', 'special-thali'];
 
 export default function SpecialtiesSection() {
   // Extract specials with images mapping
@@ -23,12 +23,12 @@ export default function SpecialtiesSection() {
     category.items.forEach((item) => {
       if (chefSpecialIds.includes(item.id)) {
         let image = '';
-        if (item.id === 'dal-makhani') {
-          image = 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&q=80&w=400';
-        } else if (item.id === 'palak-paneer') {
+        if (item.id === 'paneer-tikka') {
+          image = 'https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&q=80&w=400';
+        } else if (item.id === 'paneer-pasanda') {
           image = 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=400';
-        } else if (item.id === 'masala-dosa') {
-          image = 'https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&q=80&w=400';
+        } else if (item.id === 'malai-kofta') {
+          image = 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&q=80&w=400';
         } else if (item.id === 'special-thali') {
           image = 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&q=80&w=400';
         }

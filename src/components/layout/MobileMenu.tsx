@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Phone } from 'lucide-react';
+import { X, Phone, Calendar } from 'lucide-react';
 import { restaurantInfo } from '@/data/restaurant-info';
 import Button from '../ui/Button';
 
@@ -76,19 +76,14 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
             </div>
 
             {/* Logo/Header */}
-            <div className="text-center mb-8 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full border-2 border-accent-saffron/80 flex items-center justify-center bg-white shadow-sm mb-2">
-                <span className="font-heading font-black text-xl text-accent-saffron leading-none tracking-tighter">
-                  SV
-                </span>
-              </div>
-              <span className="font-heading italic text-2xl font-bold text-primary-900 block leading-tight">
-                Shankara Vegis
+            <div className="text-center mb-8">
+              <span className="font-heading italic text-3xl font-bold text-primary-900 block">
+                Pankhuri
               </span>
-              <span className="font-body text-[8px] font-bold uppercase tracking-widest text-accent-maroon block mt-0.5">
-                Since 1992
+              <span className="font-body text-[10px] font-bold uppercase tracking-widest text-accent-orange">
+                Reloaded
               </span>
-              <span className="block text-green-700 text-[10px] font-extrabold mt-1">🟢 PURE VEG & VEGAN</span>
+              <span className="block text-green-600 text-[10px] font-bold mt-1">🟢 PURE VEG</span>
             </div>
 
             {/* Navigation Links */}
@@ -111,9 +106,9 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
               })}
 
               <motion.div variants={itemVariants} className="pt-4 border-t border-primary-100">
-                <Link href="/contact#reserve" onClick={onClose} className="block w-full">
-                  <Button className="w-full flex items-center justify-center gap-2 bg-[#7B1818] hover:bg-[#B22222] border-0 text-white shadow-md" size="md">
-                    📞 Reserve a Table
+                <Link href="/contact" onClick={onClose} className="block w-full">
+                  <Button variant="primary" className="w-full flex items-center justify-center gap-2" size="md">
+                    <Calendar className="w-4 h-4" /> Book a Table
                   </Button>
                 </Link>
               </motion.div>
@@ -124,11 +119,11 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary-600" />
                 <a href={`tel:${restaurantInfo.phone}`} className="hover:text-accent-orange font-semibold">
-                  {restaurantInfo.phoneDisplay}
+                  {restaurantInfo.phone}
                 </a>
               </div>
               <div className="text-[10px] text-gray-500 uppercase tracking-wider font-bold">
-                Open Daily: 8:00 AM - 10:30 PM
+                Open Daily: 11:00 AM - 11:00 PM
               </div>
             </div>
           </motion.div>

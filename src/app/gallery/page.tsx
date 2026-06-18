@@ -8,7 +8,7 @@ import PageTransition from '@/components/layout/PageTransition';
 
 export const metadata: Metadata = {
   title: 'Photo Gallery | Ambiance & Culinary Arts',
-  description: 'A visual tour of Shankara Vegis Restaurant Agra. Browse photos of our signature pure vegetarian & vegan dishes, 360° rooftop Taj Mahal views, and cozy dining spaces.',
+  description: 'A visual tour of Pankhuri Reloaded Agra. Browse high-resolution photos of our signature pure vegetarian dishes, elegant dining rooms, and fine seating areas.',
 };
 
 export default function GalleryPage() {

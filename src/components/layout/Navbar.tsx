@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { Menu } from 'lucide-react';
+import { Menu, Calendar } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useScrollDirection } from '@/hooks/useScrollDirection';
 import Container from '../ui/Container';
@@ -41,21 +41,16 @@ export default function Navbar() {
       >
         <Container className="flex items-center justify-between">
           {/* Logo matching menu cover page */}
-          <Link href="/" className="flex items-center gap-3 group">
-            {/* SV Monogram Circular Badge */}
-            <div className="w-10 h-10 rounded-full border-2 border-accent-saffron/80 flex items-center justify-center bg-white shadow-sm group-hover:border-accent-saffron transition-colors">
-              <span className="font-heading font-black text-base text-accent-saffron leading-none tracking-tighter">
-                SV
-              </span>
-            </div>
-            <div className="flex flex-col items-start">
-              <span className="font-heading italic text-xl md:text-2xl font-extrabold text-primary-950 leading-none tracking-wide group-hover:text-primary-800 transition-colors">
-                Shankara Vegis
-              </span>
-              <span className="font-body text-[8px] font-extrabold uppercase tracking-[0.2em] text-accent-maroon leading-none mt-1">
-                Since 1992
-              </span>
-            </div>
+          <Link href="/" className="flex flex-col items-start group">
+            <span className="font-heading italic text-2xl md:text-3xl font-extrabold text-primary-950 leading-none tracking-wide group-hover:text-primary-800 transition-colors">
+              Pankhuri
+            </span>
+            <span className="font-body text-[9px] font-extrabold uppercase tracking-[0.25em] text-accent-orange leading-none mt-1 pl-[0.1em]">
+              Reloaded
+            </span>
+            <span className="text-[8px] text-red-600 font-bold italic mt-1 leading-none">
+              (Pure Vegetarian)
+            </span>
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -86,12 +81,14 @@ export default function Navbar() {
 
           {/* Header Action Button (Desktop) */}
           <div className="hidden md:flex items-center gap-4">
-            <Link href="/contact#reserve">
+            <Link href="/contact">
               <Button
+                variant="primary"
                 size="sm"
-                className="flex items-center gap-2 text-xs bg-[#7B1818] hover:bg-[#B22222] active:bg-[#601212] text-white hover:text-white border-0 shadow-md"
+                className="flex items-center gap-2 text-xs"
+                iconLeft={<Calendar className="w-3.5 h-3.5" />}
               >
-                📞 Reserve
+                Book a Table
               </Button>
             </Link>
           </div>

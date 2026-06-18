@@ -7,8 +7,6 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 import { restaurantInfo } from '@/data/restaurant-info';
 import Container from '../ui/Container';
-import OmSymbol from '../decorations/OmSymbol';
-import LotusFlower from '../decorations/LotusFlower';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -21,106 +19,107 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#7B1818] text-pink-100/90 overflow-hidden pt-16 pb-8 border-t border-[#601212]">
-      {/* Mahadev Trishul Background (Premium blending) */}
-      <div className="absolute inset-0 z-0 opacity-[0.06] pointer-events-none mix-blend-multiply">
+    <footer className="relative bg-primary-900 text-primary-100 overflow-hidden pt-16 pb-8 border-t border-primary-800">
+      {/* Peacock Feather Background (Premium blending) */}
+      <div className="absolute inset-0 z-0 opacity-15 pointer-events-none mix-blend-overlay">
         <Image
-          src="/images/mahadev_trishul.png"
-          alt="Mahadev Trishul Background"
+          src="/images/peacock_feather_left.jpg"
+          alt="Peacock Feather Background"
           fill
-          className="object-contain object-left md:object-center"
+          className="object-cover object-left md:object-center"
           sizes="100vw"
         />
       </div>
 
       {/* Decorative leaf border pattern at the top of the footer */}
-      <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-accent-saffron via-accent-orange to-accent-saffron opacity-80" />
-
-      {/* Background spiritual symbols */}
-      <OmSymbol size={160} className="absolute -bottom-10 -left-10 text-white/5 opacity-5 animate-pulse-slow" />
-      <LotusFlower size="md" opacity={0.06} className="top-12 right-12 text-white" />
+      <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary-400 via-primary-300 to-primary-400 opacity-80" />
 
       <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12 relative z-10">
         {/* About Column */}
         <div className="flex flex-col gap-4">
-          <Link href="/" className="flex items-center gap-3 group">
-            {/* SV Monogram Circular Badge */}
-            <div className="w-12 h-12 rounded-full border-2 border-accent-saffron/80 flex items-center justify-center bg-white shadow-sm">
-              <span className="font-heading font-black text-xl text-accent-saffron leading-none tracking-tighter">
-                SV
-              </span>
-            </div>
-            <div className="flex flex-col items-start">
-              <span className="font-heading italic text-2xl font-bold text-white tracking-wide">
-                Shankara Vegis
-              </span>
-              <span className="font-body text-[9px] font-bold uppercase tracking-[0.2em] text-accent-saffron leading-none mt-1">
-                Since 1992
-              </span>
-            </div>
+          <Link href="/" className="flex flex-col items-start">
+            <span className="font-heading italic text-3xl font-bold text-white tracking-wide">
+              Pankhuri
+            </span>
+            <span className="font-body text-[10px] font-bold uppercase tracking-[0.25em] text-accent-orange leading-none mt-1 pl-[0.1em]">
+              Reloaded
+            </span>
+            <span className="text-[9px] text-red-400 font-bold italic mt-1 leading-none">
+              (Pure Vegetarian)
+            </span>
           </Link>
-          <p className="text-accent-saffron font-body text-xs font-extrabold italic mt-1 leading-relaxed">
-            हमारे यहाँ शुद्ध शाकाहारी भोजन मिलता है
+          <p className="text-primary-200 text-sm leading-relaxed mt-2">
+            Experience the authentic flavors of India. Crafted with passion, using fresh local ingredients in a pure vegetarian kitchen.
           </p>
-          <p className="text-pink-100/80 text-sm leading-relaxed font-body">
-            A family-owned pure vegetarian & vegan restaurant in Agra since 1992, featuring a stunning 360° rooftop view of the Taj Mahal.
-          </p>
-          {/* Recognition Badges */}
-          <div className="mt-2 flex flex-col gap-2">
-            <span className="text-[9px] uppercase font-bold tracking-widest text-accent-saffron">Recognition</span>
-            <div className="flex flex-wrap gap-2 text-[10px] font-bold text-white/95">
-              <span className="bg-[#B22222] px-2 py-0.5 rounded border border-white/10">🏆 Lonely Planet Recommended</span>
-              <span className="bg-green-700 px-2 py-0.5 rounded border border-white/10">⭐ TripAdvisor Excellence 2025</span>
-            </div>
+          {/* Taj Mahal Silhouette Watermark/Icon */}
+          <div className="mt-4 flex items-center gap-3 text-primary-300/40">
+            <svg viewBox="0 0 100 50" fill="currentColor" className="w-16 h-8">
+              <rect x="15" y="44" width="70" height="2" />
+              <rect x="18" y="42" width="64" height="2" />
+              <rect x="35" y="26" width="30" height="16" />
+              <path d="M42 26 C42 16 58 16 58 26 Z" />
+              <rect x="49" y="12" width="2" height="4" />
+              <path d="M36 26 C36 21 41 21 41 26 Z" />
+              <path d="M59 26 C59 21 64 21 64 26 Z" />
+              <rect x="23" y="16" width="2.5" height="26" />
+              <path d="M22 16 C22 13 26.5 13 26.5 16 Z" />
+              <rect x="21" y="24" width="6.5" height="1" />
+              <rect x="21" y="32" width="6.5" height="1" />
+              <rect x="74.5" y="16" width="2.5" height="26" />
+              <path d="M73.5 16 C73.5 13 78 13 78 16 Z" />
+              <rect x="72.5" y="24" width="6.5" height="1" />
+              <rect x="72.5" y="32" width="6.5" height="1" />
+            </svg>
+            <span className="text-xs uppercase font-semibold tracking-widest leading-none">Agra, India</span>
           </div>
         </div>
 
         {/* Quick Links Column */}
         <div className="flex flex-col gap-4">
-          <h3 className="font-heading text-lg font-bold text-white border-b border-[#8C2020] pb-2">
+          <h3 className="font-heading text-lg font-bold text-white border-b border-primary-800 pb-2">
             Quick Links
           </h3>
-          <ul className="flex flex-col gap-2.5 text-sm text-pink-100/80">
+          <ul className="flex flex-col gap-2.5 text-sm text-primary-200">
             <li>
-              <Link href="/" className="hover:text-accent-saffron transition-colors">Home</Link>
+              <Link href="/" className="hover:text-accent-orange transition-colors">Home</Link>
             </li>
             <li>
-              <Link href="/menu" className="hover:text-accent-saffron transition-colors">Our Menu</Link>
+              <Link href="/menu" className="hover:text-accent-orange transition-colors">Our Menu</Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-accent-saffron transition-colors">About Us</Link>
+              <Link href="/about" className="hover:text-accent-orange transition-colors">About Us</Link>
             </li>
             <li>
-              <Link href="/gallery" className="hover:text-accent-saffron transition-colors">Gallery</Link>
+              <Link href="/gallery" className="hover:text-accent-orange transition-colors">Gallery</Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-accent-saffron transition-colors">Contact & Booking</Link>
+              <Link href="/contact" className="hover:text-accent-orange transition-colors">Contact & Booking</Link>
             </li>
           </ul>
         </div>
 
         {/* Contact Info Column */}
         <div className="flex flex-col gap-4">
-          <h3 className="font-heading text-lg font-bold text-white border-b border-[#8C2020] pb-2">
+          <h3 className="font-heading text-lg font-bold text-white border-b border-primary-800 pb-2">
             Visit Us
           </h3>
-          <ul className="flex flex-col gap-3 text-sm text-pink-100/80">
+          <ul className="flex flex-col gap-3 text-sm text-primary-200">
             <li className="flex gap-2.5 items-start">
-              <MapPin className="w-5 h-5 text-accent-saffron flex-shrink-0 mt-0.5" />
+              <MapPin className="w-5 h-5 text-accent-orange flex-shrink-0 mt-0.5" />
               <span>
                 {restaurantInfo.address.street},<br />
-                Near Taj Mahal South Gate, {restaurantInfo.address.city}, {restaurantInfo.address.state} - {restaurantInfo.address.pincode}
+                {restaurantInfo.address.city}, {restaurantInfo.address.state} - {restaurantInfo.address.pincode}
               </span>
             </li>
             <li className="flex gap-2.5 items-center">
-              <Phone className="w-4 h-4 text-accent-saffron flex-shrink-0" />
-              <a href={`tel:${restaurantInfo.phone}`} className="hover:text-accent-saffron transition-colors">
-                {restaurantInfo.phoneDisplay}
+              <Phone className="w-4 h-4 text-accent-orange flex-shrink-0" />
+              <a href={`tel:${restaurantInfo.phone}`} className="hover:text-accent-orange transition-colors">
+                {restaurantInfo.phone}
               </a>
             </li>
             <li className="flex gap-2.5 items-center">
-              <Mail className="w-4 h-4 text-accent-saffron flex-shrink-0" />
-              <a href={`mailto:${restaurantInfo.email}`} className="hover:text-accent-saffron transition-colors">
+              <Mail className="w-4 h-4 text-accent-orange flex-shrink-0" />
+              <a href={`mailto:${restaurantInfo.email}`} className="hover:text-accent-orange transition-colors">
                 {restaurantInfo.email}
               </a>
             </li>
@@ -129,13 +128,13 @@ export default function Footer() {
 
         {/* Opening Hours & Newsletter */}
         <div className="flex flex-col gap-4">
-          <h3 className="font-heading text-lg font-bold text-white border-b border-[#8C2020] pb-2">
+          <h3 className="font-heading text-lg font-bold text-white border-b border-primary-800 pb-2">
             Newsletter
           </h3>
-          <p className="text-pink-100/80 text-sm">
+          <p className="text-primary-200 text-sm">
             Subscribe to receive special offers, recipe secrets, and events updates.
           </p>
-          <form onSubmit={handleSubscribe} className="flex rounded-full overflow-hidden border border-[#8C2020] bg-[#601212] p-1">
+          <form onSubmit={handleSubscribe} className="flex rounded-full overflow-hidden border border-primary-800 bg-primary-950 p-1">
             <input
               type="email"
               value={email}
@@ -146,7 +145,7 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="bg-accent-saffron hover:bg-yellow-600 text-white p-2 rounded-full transition-colors flex items-center justify-center focus:outline-none"
+              className="bg-accent-orange hover:bg-orange-600 text-white p-2 rounded-full transition-colors flex items-center justify-center focus:outline-none"
               aria-label="Subscribe"
             >
               <Send className="w-4 h-4" />
@@ -156,11 +155,13 @@ export default function Footer() {
       </Container>
 
       {/* Footer Bottom */}
-      <div className="border-t border-[#8C2020]/50 pt-8 text-center text-xs text-pink-100/60">
+      <div className="border-t border-primary-800/80 pt-8 text-center text-xs text-primary-300">
         <Container className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>© 2026 Shankara Vegis Restaurant. All rights reserved.</p>
+          <p>© 2026 Pankhuri Reloaded. All rights reserved.</p>
           <div className="flex gap-6">
             <a href={restaurantInfo.social.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
+            <a href={restaurantInfo.social.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Facebook</a>
+            <a href={restaurantInfo.social.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Twitter</a>
           </div>
         </Container>
       </div>

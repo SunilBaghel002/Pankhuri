@@ -46,7 +46,7 @@ export default function SectionHeading({
         {title}
       </motion.h2>
       
-      {/* Improved Underline with Bilva Theme Leaves */}
+      {/* Improved Underline with Peacock Theme Leaves */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -56,60 +56,60 @@ export default function SectionHeading({
       >
         <svg width="140" height="24" viewBox="0 0 140 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full overflow-visible">
           <defs>
-            <linearGradient id="sacredLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <linearGradient id="peacockLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="rgba(212, 146, 11, 0)" />
-              <stop offset="20%" stopColor="#2D5016" />
+              <stop offset="20%" stopColor="#2D6A4F" />
               <stop offset="50%" stopColor="#D4920B" />
-              <stop offset="80%" stopColor="#2D5016" />
+              <stop offset="80%" stopColor="#2D6A4F" />
               <stop offset="100%" stopColor="rgba(212, 146, 11, 0)" />
             </linearGradient>
-            <linearGradient id="sacredEyeGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#2D5016" />    {/* Forest green */}
-              <stop offset="60%" stopColor="#7BA05B" />   {/* Sage green */}
-              <stop offset="100%" stopColor="#D4920B" />  {/* Saffron gold */}
+            <linearGradient id="peacockEyeGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#1B4D3E" />    {/* Forest green */}
+              <stop offset="60%" stopColor="#0B525B" />   {/* Peacock teal */}
+              <stop offset="100%" stopColor="#0077B6" />  {/* Royal blue */}
             </linearGradient>
-            <linearGradient id="sacredGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient id="peacockGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#F5D061" />
               <stop offset="100%" stopColor="#D4920B" />
             </linearGradient>
           </defs>
 
           {/* Elegant Horizontal Line */}
-          <path d="M 10,14 C 40,14 100,14 130,14" stroke="url(#sacredLineGrad)" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M 10,14 C 40,14 100,14 130,14" stroke="url(#peacockLineGrad)" strokeWidth="1.5" strokeLinecap="round" />
 
-          {/* Three Sacred Theme Leaves */}
+          {/* Three Peacock Theme Leaves */}
           
           {/* Left Leaf: Tilted left and sitting on the line */}
           <g transform="translate(56, 14) rotate(-35) translate(-6, -6)">
             <path
               d="M6,12 C2,8 2,4 6,1 C10,4 10,8 6,12 Z"
-              fill="url(#sacredEyeGrad)"
-              stroke="url(#sacredGoldGrad)"
+              fill="url(#peacockEyeGrad)"
+              stroke="url(#peacockGoldGrad)"
               strokeWidth="0.8"
             />
-            <path d="M6,12 L6,1" stroke="url(#sacredGoldGrad)" strokeWidth="0.5" />
+            <path d="M6,12 L6,1" stroke="url(#peacockGoldGrad)" strokeWidth="0.5" />
           </g>
 
           {/* Right Leaf: Tilted right and sitting on the line */}
           <g transform="translate(84, 14) rotate(35) translate(-6, -6)">
             <path
               d="M6,12 C2,8 2,4 6,1 C10,4 10,8 6,12 Z"
-              fill="url(#sacredEyeGrad)"
-              stroke="url(#sacredGoldGrad)"
+              fill="url(#peacockEyeGrad)"
+              stroke="url(#peacockGoldGrad)"
               strokeWidth="0.8"
             />
-            <path d="M6,12 L6,1" stroke="url(#sacredGoldGrad)" strokeWidth="0.5" />
+            <path d="M6,12 L6,1" stroke="url(#peacockGoldGrad)" strokeWidth="0.5" />
           </g>
 
           {/* Center Leaf: Straight up and raised slightly */}
           <g transform="translate(70, 9) translate(-7, -9)">
             <path
               d="M7,15 C2,10 2,5 7,1 C12,5 12,10 7,15 Z"
-              fill="url(#sacredEyeGrad)"
-              stroke="url(#sacredGoldGrad)"
+              fill="url(#peacockEyeGrad)"
+              stroke="url(#peacockGoldGrad)"
               strokeWidth="1"
             />
-            <path d="M7,15 L7,1" stroke="url(#sacredGoldGrad)" strokeWidth="0.6" />
+            <path d="M7,15 L7,1" stroke="url(#peacockGoldGrad)" strokeWidth="0.6" />
           </g>
         </svg>
       </motion.div>

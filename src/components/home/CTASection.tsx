@@ -12,14 +12,14 @@ import FloatingLeaf from '../decorations/FloatingLeaf';
 
 export default function CTASection() {
   return (
-    <section className="relative py-24 bg-gradient-to-br from-[#7B1818] to-[#450C0C] text-white overflow-hidden">
-      {/* Mahadev Shiva Background (Premium blending) */}
-      <div className="absolute inset-0 z-0 opacity-[0.06] pointer-events-none mix-blend-multiply">
+    <section className="relative py-24 bg-gradient-to-br from-primary-800 to-primary-950 text-white overflow-hidden">
+      {/* Peacock Feather Background (Premium blending) */}
+      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none mix-blend-overlay">
         <Image
-          src="/images/mahadev_shiva.png"
-          alt="Meditating Lord Shiva Background"
+          src="/images/peacock_feather_right.jpg"
+          alt="Peacock Feather Background"
           fill
-          className="object-contain object-right md:object-center"
+          className="object-cover object-right md:object-center"
           sizes="100vw"
         />
       </div>
