@@ -7,7 +7,7 @@ import { restaurantInfo } from '@/data/restaurant-info';
 export default function WhatsAppButton() {
   // Clean phone number for URL
   const number = restaurantInfo.whatsapp.replace(/[^0-9]/g, '');
-  const message = encodeURIComponent('Namaste! I would like to reserve a table at Pankhuri Reloaded.');
+  const message = encodeURIComponent('Namaste! I would like to reserve a table at Shankara Vegis Restaurant.');
   const url = `https://wa.me/${number}?text=${message}`;
 
   return (

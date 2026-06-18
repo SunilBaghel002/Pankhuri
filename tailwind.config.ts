@@ -25,6 +25,8 @@ const config: Config = {
           orange: '#E8762D',
           saffron: '#D4920B',
           gold: '#B8860B',
+          red: '#B22222', // Temple Red
+          maroon: '#7B1818', // Royal Maroon
         },
         brand: {
           brown: '#4A2C1A',
@@ -44,6 +46,8 @@ const config: Config = {
         'leaf-sway': 'leafSway 4s ease-in-out infinite',
         'fade-in-up': 'fadeInUp 0.6s ease-out',
         'shimmer': 'shimmer 2s infinite',
+        'pulse-slow': 'pulseSlow 3s ease-in-out infinite',
+        'rotate-very-slow': 'rotateVerySlow 120s linear infinite',
       },
       keyframes: {
         float: {
@@ -61,6 +65,14 @@ const config: Config = {
         shimmer: {
           '0%': { backgroundPosition: '-200% 0' },
           '100%': { backgroundPosition: '200% 0' },
+        },
+        pulseSlow: {
+          '0%, 100%': { opacity: '0.15', transform: 'scale(1)' },
+          '50%': { opacity: '0.25', transform: 'scale(1.05)' },
+        },
+        rotateVerySlow: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
         },
       },
       backgroundImage: {

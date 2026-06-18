@@ -1,6 +1,7 @@
 import React from 'react';
 import { MenuItem as MenuItemType } from '@/types/menu';
 import VegIndicator from '../shared/VegIndicator';
+import VeganBadge from '../shared/VeganBadge';
 import Badge from '../ui/Badge';
 
 interface MenuItemProps {
@@ -11,13 +12,17 @@ export default function MenuItem({ item }: MenuItemProps) {
   return (
     <div className="flex flex-col gap-1 py-4 group hover:bg-primary-50/10 px-3 rounded-lg transition-colors">
       <div className="flex items-center gap-2.5">
-        {/* Veg Indicator */}
-        <VegIndicator size="sm" />
+        {/* Veg & Vegan Indicators */}
+        <div className="flex items-center gap-1.5 flex-shrink-0">
+          <VegIndicator size="sm" />
+          {item.isVegan && <VeganBadge showText={false} />}
+        </div>
 
         {/* Item Name */}
         <div className="flex-1 flex items-baseline justify-between gap-2 overflow-hidden">
           <span className="font-heading font-extrabold text-base md:text-lg text-brand-brown group-hover:text-primary-800 transition-colors flex items-center gap-2 flex-wrap">
             {item.name}
+            {item.isVegan && <span className="text-[9px] font-extrabold uppercase text-green-700 tracking-wider">Vegan</span>}
             {item.isSpecial && <Badge variant="accent" className="py-0 px-2 text-[9px] uppercase tracking-wider scale-95">Special</Badge>}
             {item.isNew && <Badge variant="primary" className="py-0 px-2 text-[9px] uppercase tracking-wider scale-95">New</Badge>}
           </span>
